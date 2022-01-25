@@ -11,6 +11,7 @@ public class Main {
         StringUtils.printTextByWords("jkhjhg jkhdu iud, jihuidh.kjhdggd? орвор ");
 
 //        StringUtils.coding("abcdefghijkl mMMMnop.qrs, 89tuvwWWWxyza");
+        System.out.println("jhghjhfh");
     }
 }
 
