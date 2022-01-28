@@ -17,6 +17,13 @@ public class StringUtils {
         return count;
     }
 
+    //2-й вариант решения:
+    public static void countWords(String text) {
+        String[] word = text.split(" ");
+        System.out.println(word.length);
+    }
+
+    //Этот вариант для перевертывания всего текста:
     public static String upsideDownWord(String text) {
 
         String result = "";
@@ -25,6 +32,14 @@ public class StringUtils {
         }
         System.out.println("Текст где все слова наоборот: " + result);
         return result;
+    }
+
+    //Метод печатает на консоль этот же текст, только КАЖДОЕ слово наоборот будет напечатано
+    public static void upsideDownWords(String text) {
+        String[] word = text.split(" ");
+        for (int i = 0; i < word.length; i++) {
+            System.out.println(new StringBuilder(word[i]).reverse().toString());
+        }
     }
 
     public static int numberOfConsonants(String text) {
