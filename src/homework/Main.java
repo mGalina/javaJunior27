@@ -3,7 +3,7 @@ package homework;
 public class Main {
     public static void main(String[] args) {
 
-        /**
+        /*
          * Домашнее задание:
          * Создать методы:
          * 1) Мы передаем в метод текст, а он нам возвращает кол-во слов (числом)

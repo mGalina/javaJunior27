@@ -2,7 +2,7 @@ package homework7;
 
 public class SoftwareUtils {
 
-    /**
+    /*
      * 1) Метод принимает массив чисел, и возвращает из метода кол-во четных цифр в этом массиве
      * 2) Метод принимает текстовую переменную (пароль), и должен вернуть true, или false.
      * Если пароль содержит хотя бы одну цифру и заглавную букву и при этом он больше 8ми символов - вернуть true.
@@ -54,16 +54,25 @@ public class SoftwareUtils {
 
     //3. Метод валидации email
     public static void emailValidation(String email) {
-        boolean dot = true;
+
         int countAt = 0;
-        for (int i = 0; i < email.length(); i++) {
-            if (email.charAt(i) == '@') {
-                countAt++;
-            }
-            if (email.charAt(0) == '.' || email.charAt(email.length() - 1) == '.') {
-                dot = false;
+        int countDot = 0;
+        int index = 0;
+
+        if (email.charAt(0) == '.' || email.charAt(email.length() - 1) == '.') {
+        } else {
+            for (int i = 0; i < email.length(); i++) {
+                if (email.charAt(i) == '@') {
+                    countAt++;
+                    index = i;
+                }
+                if (email.charAt(i) == '.' && index != 0) {
+                    if (i > index) {
+                        countDot++;
+                    }
+                }
             }
         }
-        System.out.println(countAt == 1 && dot);
+        System.out.println(countAt == 1 && countDot == 1);
     }
 }

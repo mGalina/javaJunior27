@@ -8,9 +8,9 @@ public class Main {
 //        int count2 = StringUtils.countGlassFromText("jkljhggdsiuyytvscv");
 //        System.out.println(count2);
 //
-        StringUtils.printTextByWords("jkhjhg jkhdu iud, jihuidh.kjhdggd? орвор ");
+//        StringUtils.printTextByWords("jkhjhg jkhdu iud, jihuidh.kjhdggd? орвор ");
 
-//        StringUtils.coding("abcdefghijkl mMMMnop.qrs, 89tuvwWWWxyza");
+        StringUtils.coding("abcdefghijkl mMMMnop.qrs, 89tuvwWWWxyza");
         System.out.println("jhghjhfh");
     }
 }

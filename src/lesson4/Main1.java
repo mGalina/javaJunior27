@@ -6,8 +6,5 @@ public class Main1 {
         String lowerText = text.toLowerCase();
         System.out.println(text);
         System.out.println(lowerText);
-
-
-
     }
 }
