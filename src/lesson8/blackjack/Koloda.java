@@ -1,9 +1,10 @@
 package lesson8.blackjack;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Koloda {
-    private ArrayList<Card> cards = new ArrayList<>();
+    public ArrayList<Card> cards = new ArrayList<>();
 
     public Koloda() {
         cards.add(new Card("Двойка трефа", 2));
@@ -72,4 +73,10 @@ public class Koloda {
         cards.add(new Card("Туз черви", 11));
     }
     //метод возврата рондомной карты
+    public static Card getRandArrayElement(ArrayList<Card> cards){
+        Random random = new Random();
+        Card cardsRand = cards.get(random.nextInt(cards.size()));
+        System.out.println(cardsRand.toString());
+        return cardsRand;
+    }
 }
