@@ -1,47 +1,69 @@
 package homework9;
 
-public class Triangle extends Figures {
-    private double sideOne;
-    private double sideTwo;
-    private double sideThree;
-    private double height;
+public class Triangle {
+    private int a;
+    private int b;
+    private int c;
 
     public Triangle() {
     }
 
-    public Triangle(double square, double perimeter) {
-        super(square, perimeter);
+    public Triangle(int a, int b, int c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
 
-    public double getSideOne() {
-        return sideOne;
+    public int getA() {
+        return a;
     }
 
-    public void setSideOne(double sideOne) {
-        this.sideOne = sideOne;
+    public void setA(int a) {
+        this.a = a;
     }
 
-    public double getSideTwo() {
-        return sideTwo;
+    public int getB() {
+        return b;
     }
 
-    public void setSideTwo(double sideTwo) {
-        this.sideTwo = sideTwo;
+    public void setB(int b) {
+        this.b = b;
     }
 
-    public double getSideThree() {
-        return sideThree;
+    public int getC() {
+        return c;
     }
 
-    public void setSideThree(double sideThree) {
-        this.sideThree = sideThree;
+    public void setC(int c) {
+        this.c = c;
     }
 
-    public double getHeight() {
-        return height;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Triangle triangle = (Triangle) o;
+
+        if (a != triangle.a) return false;
+        if (b != triangle.b) return false;
+        return c == triangle.c;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    @Override
+    public int hashCode() {
+        int result = a;
+        result = 31 * result + b;
+        result = 31 * result + c;
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "a=" + a +
+                ", b=" + b +
+                ", c=" + c +
+                '}';
     }
 }
