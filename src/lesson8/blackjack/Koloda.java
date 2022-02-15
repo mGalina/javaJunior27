@@ -2,9 +2,10 @@ package lesson8.blackjack;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Koloda {
-    public ArrayList<Card> cards = new ArrayList<>();
+    protected ArrayList<Card> cards = new ArrayList<>();
 
     public Koloda() {
         cards.add(new Card("Двойка трефа", 2));
@@ -72,11 +73,18 @@ public class Koloda {
         cards.add(new Card("Туз пика", 11));
         cards.add(new Card("Туз черви", 11));
     }
-    //метод возврата рондомной карты
-    public static Card getRandArrayElement(ArrayList<Card> cards){
+
+    //1. метод возврата рондомной карты
+    public static Card getRandCard(ArrayList<Card> cards) {
         Random random = new Random();
-        Card cardsRand = cards.get(random.nextInt(cards.size()));
-        System.out.println(cardsRand.toString());
-        return cardsRand;
+        Card cardRand = cards.get(random.nextInt(cards.size()));
+        System.out.println(cardRand.toString());
+        return cardRand;
+    }
+
+    //2. метод возврата рондомной карты
+    public Card getRandomCard() {
+        int randomNum = ThreadLocalRandom.current().nextInt(0, 52);
+        return cards.get(randomNum);
     }
 }
