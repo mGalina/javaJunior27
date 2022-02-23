@@ -99,22 +99,22 @@ public class Matrix implements IMatrix {
 
     @Override
     public IMatrix mul(IMatrix otherMatrix) throws IllegalArgumentException, NullPointerException {
-//        if (this.getRows() != otherMatrix.getColumns()){
-//            System.out.println("Количество строк в первом множетеле не рано количеству столбцов во втором!");
-//            return null;
-//        }
-//        if (this.getColumns() != otherMatrix.getRows()){
-//            System.out.println("Количество столбцов в первом множетеле не рано количеству строк во втором!");
-//            return null;
-//        }
-//        Matrix matrix = new Matrix(this.getRows(), otherMatrix.getColumns());
-//        for (int i = 0; i < getRows(); i++) {
-//            for (int j = 0; j < getColumns(); j++) {
-//                for (int k = 0; j < otherMatrix.getRows(); k++){
-//                    matrix.setValueAt(i, j, matrix.getValueAt(i, k) * otherMatrix.getValueAt(k, j));
-//                }
-//            }
-//        }
+        if (this.getRows() != otherMatrix.getColumns()) {
+            System.out.println("Количество строк в первом множетеле не рано количеству столбцов во втором!");
+            return null;
+        }
+        if (this.getColumns() != otherMatrix.getRows()) {
+            System.out.println("Количество столбцов в первом множетеле не рано количеству строк во втором!");
+            return null;
+        }
+        Matrix matrix = new Matrix(this.getRows(), otherMatrix.getColumns());
+        for (int i = 0; i < getRows(); i++) {
+            for (int j = 0; j < getColumns(); j++) {
+                for (int k = 0; j < otherMatrix.getColumns(); k++) {
+                    numbers[i][j] += this.getValueAt(i, k) * otherMatrix.getValueAt(k, j);
+                }
+            }
+        }
         return null;
     }
 

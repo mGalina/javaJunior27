@@ -15,30 +15,30 @@ public class Main {
                 {0, 0, 1}};
         Matrix matrix2 = new Matrix(num2);
 
-        //1. Возвращает количество строк матрицы
-        System.out.println("Количество строк: " + matrix.getRows());
-
-        //2. Возвращает количество столбцов строк матрицы
-        System.out.println("Количество столбцов: " + matrix.getColumns());
-
-        //3. Возвращает элемент матрицы по индексам ??
-        System.out.println("Элемент матрицы по индексу 0,0: " + matrix.getValueAt(0, 0));
-
-        //4. Устанавливает элемент матрицы по индексам
-        System.out.println("Установлен элемент матрицы по индексу 0,0: ");
-        matrix.setValueAt(0, 0, 1);
-        matrix.printToConsole();
-        matrix.setValueAt(0, 0, 0);
-
-        //5. Возвращает сумму текущей матрицы и второго аргумента
-        System.out.println("Сумма текущей матрицы и второго аргумента: ");
-        IMatrix add = matrix2.add(matrix1);
-        add.printToConsole();
-
-        //6. Возвращает разность текущей матрицы и второго аргумента
-        System.out.println("Разность текущей матрицы и второго аргумента: ");
-        IMatrix sub = matrix2.sub(matrix1);
-        sub.printToConsole();
+//        //1. Возвращает количество строк матрицы
+//        System.out.println("Количество строк: " + matrix.getRows());
+//
+//        //2. Возвращает количество столбцов строк матрицы
+//        System.out.println("Количество столбцов: " + matrix.getColumns());
+//
+//        //3. Возвращает элемент матрицы по индексам ??
+//        System.out.println("Элемент матрицы по индексу 0,0: " + matrix.getValueAt(0, 0));
+//
+//        //4. Устанавливает элемент матрицы по индексам
+//        System.out.println("Установлен элемент матрицы по индексу 0,0: ");
+//        matrix.setValueAt(0, 0, 1);
+//        matrix.printToConsole();
+//        matrix.setValueAt(0, 0, 0);
+//
+//        //5. Возвращает сумму текущей матрицы и второго аргумента
+//        System.out.println("Сумма текущей матрицы и второго аргумента: ");
+//        IMatrix add = matrix2.add(matrix1);
+//        add.printToConsole();
+//
+//        //6. Возвращает разность текущей матрицы и второго аргумента
+//        System.out.println("Разность текущей матрицы и второго аргумента: ");
+//        IMatrix sub = matrix2.sub(matrix1);
+//        sub.printToConsole();
 
         //7. Возвращает произведение текущей матрицы и второго аргумента
         System.out.println("Произведение текущей матрицы и второго аргумента: ");

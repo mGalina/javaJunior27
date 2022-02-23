@@ -28,6 +28,6 @@ public class Main {
 
         double area = NumericalUtils.areaOfTriangle(3, 4, 5);
 
-        double areaTriangle = NumericalUtils.areaOranIsOscelesTriangle(6, 7);
+        double areaTriangle = NumericalUtils.areaOfAnIsoscelesTriangle(6, 7);
     }
 }

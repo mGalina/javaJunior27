@@ -10,7 +10,7 @@ public class NumericalUtils {
         return area;
     }
 
-    public static double areaOranIsOscelesTriangle(double side, double base) {
+    public static double areaOfAnIsoscelesTriangle(double side, double base) {
 
         double areaTriangle = (base / 4) * Math.sqrt(4 * Math.pow(side, 2) - Math.pow(base, 2));
         System.out.println("Площадь равнобедренного треугольника: " + areaTriangle);
